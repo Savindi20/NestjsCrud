@@ -30,6 +30,12 @@
 
 ```bash
 $ npm install
+$ npm i -g @nestjs/cli 
+```
+
+## Create Project
+```bash
+$ nest new ProjectName
 ```
 
 ## Running the app
