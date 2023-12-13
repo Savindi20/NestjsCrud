@@ -51,6 +51,14 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Create module
+
+```bash
+$ nest g module ModuleName
+$ nest g controller ModuleName
+$ nest g service ModuleName
+```
+
 ## Test
 
 ```bash
