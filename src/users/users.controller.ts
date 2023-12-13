@@ -1,4 +1,4 @@
-import { Controller, Get, Param } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 
 @Controller('users')
 export class UsersController {
@@ -21,8 +21,13 @@ export class UsersController {
         return {id};
     }
 
-    @Get('interns') // GET/users/interns
-    findAllInterns() {
-        return [];
-    }
+    // @Get('interns') // GET/users/interns
+    // findAllInterns() {
+    //     return [];
+    // }
+
+    @Post() // POST/users
+    create(@Body() user: {}){      
+        return user;
+    }   
 }
