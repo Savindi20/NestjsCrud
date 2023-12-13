@@ -54,8 +54,13 @@ $ npm run start:prod
 ## Create module
 
 ```bash
+# Create Module
 $ nest g module ModuleName
+
+# Create Controller in that Module
 $ nest g controller ModuleName
+
+# Create Service in that Module
 $ nest g service ModuleName
 ```
 
