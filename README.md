@@ -38,19 +38,6 @@ $ npm i -g @nestjs/cli
 $ nest new ProjectName
 ```
 
-## Running the app
-
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
-```
-
 ## Create module
 
 ```bash
@@ -62,6 +49,19 @@ $ nest g controller ModuleName
 
 # Create Service in that Module
 $ nest g service ModuleName
+```
+
+## Running the app
+
+```bash
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
 ```
 
 ## Test
