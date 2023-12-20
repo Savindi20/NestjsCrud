@@ -5,33 +5,33 @@ export class UsersService {
     private users = [
         {
             "id": 1,
-            "name": 'John Doe',
-            "email": ' John@april.biz',
-            "role": 'INTERN'
+            "name": "Leanne Graham",
+            "email": "Sincere@april.biz",
+            "role": "INTERN"
         },
         {
             "id": 2,
-            "name": 'Ervin Doe',
-            "email": 'Shanna@melissa.tv',
-            "role": 'INTERN'
+            "name": "Ervin Howell",
+            "email": "Shanna@melissa.tv",
+            "role": "INTERN"
         },
         {
             "id": 3,
-            "name": 'Clementine Doe',
-            "email": 'Nathen@yes.net',
-            "role": 'ENGINEER'
+            "name": "Clementine Bauch",
+            "email": "Nathan@yesenia.net",
+            "role": "ENGINEER"
         },
         {
             "id": 4,
-            "name": 'Patricia Doe',
-            "email": 'Juli.Oco@ko.org',
-            "role": 'ENGINEER'
+            "name": "Patricia Lebsack",
+            "email": "Julianne.0Conner@kory.org",
+            "role": "ENGINEER"
         },
         {
             "id": 5,
-            "name": 'Chelsey Doe',
-            "email": 'Lu@coan.ca',
-            "role": 'ADMIN'
+            "name": "Chelsey Dietrich",
+            "email": "Lucio_Hettinger@annie.ca",
+            "role": "ADMIN"
         }
     ]
 
@@ -39,12 +39,12 @@ export class UsersService {
         if (role) {
             return this.users.filter(user => user.role === role)
         }
-        return this.users;
+        return this.users
     }
 
     findOne(id: number) {
         const user = this.users.find(user => user.id === id);
-        return user;
+        return user
     }  
 
     create(user: { name: string, email: string, role: 'INTERN' | 'ENGINEER' | 'ADMIN' }) {
@@ -53,7 +53,8 @@ export class UsersService {
             id: userByHighestId[0].id + 1,
             ...user
         }
-        return newUser;
+        this.users.push(newUser)
+        return newUser
     }
 
     update(id: number, updatedUser: { name?: string, email?: string, role?: 'INTERN' | 'ENGINEER' | 'ADMIN' }) {
@@ -62,14 +63,14 @@ export class UsersService {
             if (user.id === id) {
                 return { ...user, ...updatedUser }
             }
-            return user;
+            return user
         });
-        return this.findOne(id);
+        return this.findOne(id)
     }
 
     delete(id: number) {
         const removeUser = this.findOne(id);
-        this.users = this.users.filter(user => user.id !== id);
-        return removeUser;
+        this.users = this.users.filter(user => user.id !== id)
+        return removeUser
     }
 }
