@@ -70,10 +70,20 @@ $ npm run start:prod
 $ npm i @nestjs/mapped-types -D
 ```
 
-## Adding validation  Dependencies
+## Adding validation Dependencies
 
 ```bash
 $ npm i class-validator class-transformer
+```
+
+## Adding Prisma
+
+```bash
+# adding prisma
+$ npm i prisma -D 
+
+# initializing prisma
+$ npx prisma init 
 ```
 
 ## Test
