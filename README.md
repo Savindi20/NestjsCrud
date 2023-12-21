@@ -102,6 +102,14 @@ $ npx prisma migrate push
 $ npx prisma migrate deploy
 ```
 
+## Appling changes in Prisma
+
+```bash
+# update database
+$ npx prisma generate
+$ npx prisma migrate dev --name name_for_change 
+```
+
 ## Test
 
 ```bash
