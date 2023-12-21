@@ -4,7 +4,7 @@ import { UsersService } from './users.service';
 @Controller('users')
 export class UsersController {
 
-    constructor(private readonly usersService: UsersService) {}
+    constructor(private readonly usersService: UsersService) { }
 
     /*
     GET/users
@@ -14,31 +14,31 @@ export class UsersController {
     DELETE/users/:id
     */ 
 
-    // GET/users or /users?role=value&age=value
+    // GET /users or /users?role=value
     @Get() 
     findAll(@Query('role') role?: 'INTERN' | 'ENGINEER' | 'ADMIN') {
         return this.usersService.findAll(role)
     }
 
-    // GET/users/:id
+    // GET /users/:id
     @Get(':id') 
     findOne(@Param('id') id: string) {
         return this.usersService.findOne(+id)
     }
 
-    // POST/users
+    // POST /users 
     @Post() 
-    create(@Body() user: { name: string, email: string, role: 'INTERN' | 'ENGINEER' | 'ADMIN' }){      
+    create(@Body() user: { name: string, email: string, role: 'INTERN' | 'ENGINEER' | 'ADMIN' }) {
         return this.usersService.create(user)
-    }   
+    }
 
-    // PATCH/users/:id
+    // PATCH /users/:id
     @Patch(':id') 
     update(@Param('id') id: string, @Body() userUpdate: { name?: string, email?: string, role?: 'INTERN' | 'ENGINEER' | 'ADMIN' }) {
         return this.usersService.update(+id, userUpdate)
     }
 
-    // DELETE/users/:id
+    // DELETE /users/:id
     @Delete(':id') 
     delete(@Param('id') id: string) {
         return this.usersService.delete(+id)
