@@ -86,6 +86,22 @@ $ npm i prisma -D
 $ npx prisma init 
 ```
 
+## Run Prisma migrate
+
+```bash
+# save the SQL statements in a folder inside of prisma folder
+$ npx prisma migrate dev
+
+# this is typical name for first migration
+$ npx prisma migrate dev --name init 
+
+# won't save SQL statements for reference later
+$ npx prisma migrate push
+
+# ifirst working with local database and wanted to send those changes to the online 
+$ npx prisma migrate deploy
+```
+
 ## Test
 
 ```bash
