@@ -64,6 +64,12 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Net mapped types adding
+```bash
+# mapped-types adding (dev)
+$ npm i @nestjs/mapped-types -D
+```
+
 ## Test
 
 ```bash
