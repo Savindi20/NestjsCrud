@@ -64,10 +64,16 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Net mapped types adding
+## Adding mapped type dev dependencies
+
 ```bash
-# mapped-types adding (dev)
 $ npm i @nestjs/mapped-types -D
+```
+
+## Adding validation  Dependencies
+
+```bash
+$ npm i class-validator class-transformer
 ```
 
 ## Test
