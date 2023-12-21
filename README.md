@@ -110,6 +110,12 @@ $ npx prisma generate
 $ npx prisma migrate dev --name name_for_change 
 ```
 
+## Create RestAPI
+
+```bash
+$ nest g resource employees
+``` 
+
 ## Test
 
 ```bash
